@@ -1,3 +1,4 @@
+import { InputTextModule } from 'primeng/inputtext';
 import { BrowserModule } from '@angular/platform-browser';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 
@@ -10,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
 import {MenubarModule} from 'primeng/menubar';
+import { StefamonService } from './shared/services/stefamon.service';
 
 @NgModule({
   declarations: [
@@ -24,9 +26,10 @@ import {MenubarModule} from 'primeng/menubar';
     SharedModule,
     CardModule,
     ButtonModule,
-    MenubarModule,
+    InputTextModule,
+    MenubarModule
   ],
-  providers: [],
+  providers: [StefamonService],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
